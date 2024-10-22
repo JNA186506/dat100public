@@ -2,43 +2,62 @@ package no.hvl.dat100.oppgave3;
 
 public class Utskrift {
 
-	Simulering sim = new Simulering(100);
-	Terning terning = new Terning();
-	private int[] antall = new int[6];
-	int[] diceRolls = sim.getDiceRolled();
+	private Simulering sim = new Simulering(100);
+	private int[] diceRolls = sim.dice();
+	private String[] dice = new String[6];
 
 	public void utskrift() {
+		int tall = 0;
+		String[] terningResultat = convertedToOyne();
 		for (int i = 0; i < diceRolls.length; i++) {
-			System.out.print(sim.dice()[i] + "" + (((i + 1) % 20 == 0) ? "\n" : " "));
+			System.out.print(terningResultat[i] + "" + (((i + 1) % 20 == 0) ? "\n" : " "));
+			tall++;
+			
+		}
+		System.out.println("Antall kast: " + tall);
+		
+		int[] antallResultat = antall();
+		for (int i = 0; i < antall().length; i++) {
+			System.out.println("Antall " + dice[i] + "-ere: " + antallResultat[i]);
 		}
 	}
 
-	public void antallOyne() {
+	public int[] antall() {
+		int[] antall = new int[6];
 		for (int i = 0; i < diceRolls.length; i++) {
-			switch (diceRolls[i]) {
-			case 1:
-				antall[0]++;
-				break;
-			case 2:
-				antall[1]++;
-				break;
-			case 3:
-				antall[2]++;
-				break;
-			case 4:
-				antall[3]++;
-				break;
-			case 5:
-				antall[4]++;
-				break;
-			case 6:
-				antall[5]++;
-				break;
+			int roll = diceRolls[i] - 1;
+			
+			antall[roll]++;
+			
+			dice[roll] = getDiceFace(diceRolls[i]);
 			}
-		}
-		for (int i = 0; i < antall.length; i++) {
-			System.out.println("Antall terningkast på " + (i + 1) + ": " + antall[i]);
+		return antall;
+	}
+	
+	public String getDiceFace(int diceRoll) {
+		switch (diceRoll) {
+		case 1:
+			return "[ . ]";
+		case 2:
+			return "[ : ]";
+		case 3:
+			return "[...]";
+		case 4:
+			return "[: :]";
+		case 5:
+			return "[:.:]";
+		case 6:
+			return "[:::]";
+		default:
+			return "";
 		}
 	}
-
+	
+	public String[] convertedToOyne() {
+		String[] terningString = new String[diceRolls.length];
+		for (int i = 0; i < diceRolls.length; i++) {
+			terningString[i] = getDiceFace(diceRolls[i]);
+		}
+		return terningString;
+	}
 }
