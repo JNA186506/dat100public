@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="programmering/jplab10/starkode/src"/>
+	<classpathentry kind="src" path="programmering/jplab9/startkode/src"/>
+	<classpathentry kind="src" path="undervisning/gitdemo/TestProsjekt/src"/>
+	<classpathentry kind="src" path="undervisning/jdkdemo"/>
+	<classpathentry kind="src" path="undervisning/U01Introduksjon/src"/>
+	<classpathentry kind="src" path="undervisning/U01Kalkulator/src"/>
+	<classpathentry kind="src" path="undervisning/U02SetningerUttrykk/src"/>
+	<classpathentry kind="src" path="undervisning/U03Valgsetninger/src"/>
+	<classpathentry kind="src" path="undervisning/U04Lokker/src"/>
+	<classpathentry kind="src" path="undervisning/U05Kontrollstrukturer/src"/>
+	<classpathentry kind="src" path="undervisning/U06MetoderA/src"/>
+	<classpathentry kind="src" path="undervisning/U06MetoderB/src"/>
+	<classpathentry kind="src" path="undervisning/U07Tabeller/src"/>
+	<classpathentry kind="src" path="undervisning/U09TabellerArrays/src"/>
+	<classpathentry kind="src" path="undervisning/U10FlerDimTabeller/src"/>
+	<classpathentry kind="src" path="undervisning/U11SorteringOgSoking/src"/>
+	<classpathentry kind="src" path="undervisning/U12SkuleproveGjennomgang/src"/>
+	<classpathentry kind="src" path="undervisning/U13Objekter_1/src"/>
+	<classpathentry kind="src" path="undervisning/U14Objekter_2/src"/>
+	<classpathentry kind="src" path="undervisning/U16FilerA/src"/>
+	<classpathentry kind="src" path="undervisning/U16FilerB/src"/>
+	<classpathentry kind="src" path="undervisning/U17Unntak/src"/>
+	<classpathentry kind="src" path="undervisning/U18Objektsamlinger/src"/>
+	<classpathentry kind="src" path="undervisning/U19SubklasserOgArv/src"/>
+	<classpathentry kind="src" path="undervisning/U20Grensesnitt/src"/>
+	<classpathentry kind="src" path="undervisning/U22GUI/src"/>
+	<classpathentry kind="lib" path="easygraphics/lib/easygraphics.jar"/>
+	<classpathentry kind="lib" path="undervisning/U02SetningerUttrykk/lib/easygraphics.jar"/>
+	<classpathentry kind="lib" path="undervisning/U03Valgsetninger/lib/easygraphics.jar"/>
+	<classpathentry kind="lib" path="undervisning/U06MetoderB/lib/easygraphics.jar"/>
+	<classpathentry kind="lib" path="undervisning/U10FlerDimTabeller/libs/easygraphics.jar"/>
+	<classpathentry kind="output" path="programmering/jplab10/starkode/bin"/>
+</classpath>

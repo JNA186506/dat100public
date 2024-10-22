@@ -14,30 +14,36 @@ public class MiniExcel {
 
 		System.out.println("---------------");
 
-		// TODO - START
-
-		// iterer igjennom tabellen og skriv ut - utvidet for-løkke
-
-		// TODO _END
-
+		for (int[] x : data) {
+			for (int y : x) {
+				System.out.print(y + " ");
+			}
+			System.out.println();
+		}
+		
 		System.out.println("---------------");
 	}
 
 	public static void beregnSum() {
 
-		// TODO - START
+		for (int i = 0; i < data.length; i++) {
+			int sum = 0;
+			for (int j = 0; j < data[i].length; j++) {
+				sum += data[i][j];
+			}
+			data[i][data[i].length - 1] = sum;
+		}
 
-		// for hver rad (med unntak av siste rad) summer elementene 
-		// og skriv summen i den siste posisjonen for den aktuelle raden
 
-		// TODO - END
-
-		// TODO - START
-
-		// for hver kolonne (med unntak av siste kolonne) summer elementene 
-		// og skriv summen i siste rad i posisjonen svarende til den aktuelle kolonnen
-		
-		// TODO - END
+		for (int i = 0; i < data.length - 1; i++) {
+			int sumCol = 0;
+			for (int j = 0; j < data[i].length; j++) {
+				sumCol += data[j][i];
+			}
+			if (i < data[i].length - 1) {
+				data[data.length - 1][i] = sumCol;
+			}
+		}
 
 	}
 

@@ -6,15 +6,15 @@ public class Terning {
 	private int oyne;
 
 	public Terning() {
-		// TODO
+		this.oyne = oyne;
 	}
 
 	public int getOyne() {
-
-		return 0; // TODO
+		return oyne;
 	}
 
 	public void trill() {
-		// TODO
+		oyne = (int)(Math.random()*6+1);
 	}
+	
 }
